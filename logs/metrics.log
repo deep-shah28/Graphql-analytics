@@ -1,1 +1,0 @@
-{"timestamp":"2024-12-31T06:59:27.594Z","operation":"GetUsers","path":"/","method":"POST","currentDuration":4,"averageDuration":"13.00","slowestDuration":19,"fastestDuration":4,"totalCount":3,"hourlyDistribution":{"12:00":3},"status":200,"query":"query GetUsers {\n  users {\n    id\n    name\n    email\n    age\n    __typename\n  }\n}","isError":false,"errorMessage":null}
