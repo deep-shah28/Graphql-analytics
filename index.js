@@ -1,4 +1,3 @@
-require("./tracing");
 const express = require("express");
 const schema = require("./schema/schema");
 const { graphqlHTTP } = require("express-graphql");
@@ -6,7 +5,6 @@ const { initializeDB } = require("./config/db");
 const cors = require("cors");
 const metricsRouter = require("./routes/metrics");
 const telemetryMiddleware = require("./middleware/telemetryMiddleware");
-const tracingMiddleware = require("./middleware/tracingMiddleware");
 
 const app = express();
 const PORT = 5000;
@@ -23,7 +21,6 @@ app.use((err, req, res, next) => {
 
 // API routes
 app.use(telemetryMiddleware);
-app.use(tracingMiddleware);
 app.use("/", metricsRouter);
 app.use(
   "/graphql",
