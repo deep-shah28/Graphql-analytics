@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const { DataSource } = require("typeorm");
-console.log(process.env.DB_PASSWORD);
 const AppDataSource = new DataSource({
   type: "mysql",
   host: "localhost",
